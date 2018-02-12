@@ -23,6 +23,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         arView = ARSCNView(frame: CGRect(x: 0, y: self.view.safeAreaInsets.top, width: self.view.frame.width, height: self.view.frame.height - self.view.safeAreaInsets.top - self.view.safeAreaInsets.bottom))
+        arView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.view.addSubview(arView)
         arView.delegate = self
         arView.scene = SCNScene()
